@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Referencing External Python Files</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2022.12.1/pyscript.css" />
+    <script defer src="https://pyscript.net/releases/2022.12.1/pyscript.js"></script> 
+
+  </head>
+  <body>
+      <py-config>
+        [[fetch]]
+        files = ["./Perform_Math.py"]
+      </py-config>
+      <py-script>
+       from Perform_Math import Square,Cube
+       intNum=5
+       intSquare = Square(intNum)
+       intCube = Cube(intNum)
+       print('\nThe number is:')
+       print(intNum)
+       print('\nThe square of the number is:')
+       print(intSquare)
+       print('\nThe cube of the number is:')
+       print(intCube)
+
+      </py-script>
+  </body>
+</html>
